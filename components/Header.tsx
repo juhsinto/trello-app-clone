@@ -3,13 +3,32 @@
 
 import Image from "next/image";
 import React from "react";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
+import { MagnifyingGlassIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import Avatar from "react-avatar";
 
 function Header() {
   return (
     <header>
       <div className="flex flex-col md:flex-row items-center p-5 bg-gray-500/10 rounded-b-2xl">
+        {/* cant get this to work */}
+        {/* <div
+          className="
+            absolute
+            top-0
+            left-0
+            w-full
+            h-96
+            bg-gradient-to-br
+            from-pink-400
+            to-[#0055D1]
+            rounded-md
+            filter
+            blur-3xl
+            opacity-50
+            -z-50
+            "
+        /> */}
+
         <Image
           src="http://links.papareact.com/c2cdd5"
           alt="trello logo"
@@ -35,6 +54,13 @@ function Header() {
           {/* avatar */}
           <Avatar name="Jacinto Mendes" round size="50" color="#0055D1" />
         </div>
+      </div>
+
+      <div className="flex items-center justify-center px-5 py-2 md:py-5 ">
+        <p className="flex items-center p-5 text-sm font-light pr-5 shadow-xl rounded-xl w-fit bg-wite italic max-w-3xl text-[#0055D1]">
+          <UserCircleIcon className="inline-block h-10 w-10 text-[#0055D1] mr-1" />
+          GPT is summarising your tasks for the day....
+        </p>
       </div>
     </header>
   );
