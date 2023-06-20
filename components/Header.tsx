@@ -85,6 +85,7 @@ function Header() {
           <UserCircleIcon
             className={`inline-block h-10 w-10 text-[#0055D1] mr-1 ${loading} && "animate-spin"`}
           />
+          {/* cant get the spinner to work */}
           {suggestion && !loading
             ? suggestion
             : "GPT is summarising your tasks for the day...."}
